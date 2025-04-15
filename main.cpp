@@ -85,6 +85,10 @@ vector<int> Dijkstra::path(int x)
 
     std::vector<int> myPath;
     myPath.push_back(x);
+    if (x >= _parent.size())
+    {
+        throw std::invalid_argument("please run object.run() function before.");
+    }
     if (_parent[x] == -1)
     {
         throw std::invalid_argument("please run object.run() function before.");
@@ -129,7 +133,7 @@ int main()
     // run the algorith using run function
     // root is the starting point
     // Note: every time you change the root run this function
-    // Note: every time you connect  run this function
+    // Note: every time you connect run this function
 
     int root = 2;
     dijkstra.run(root);
