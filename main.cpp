@@ -119,7 +119,7 @@ int main()
     // third arg is weight
 
     // Note : a -> b is same as b -> a
-    dijkstra.connect(0, 3, 2);
+    dijkstra.connect(2, 3, 2);
     dijkstra.connect(2, 1, 5);
     dijkstra.connect(4, 3, 6);
     dijkstra.connect(1, 4, 9);
@@ -129,6 +129,8 @@ int main()
     // run the algorith using run function
     // root is the starting point
     // Note: every time you change the root run this function
+    // Note: every time you connect  run this function
+
     int root = 2;
     dijkstra.run(root);
 
